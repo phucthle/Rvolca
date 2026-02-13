@@ -248,6 +248,23 @@
             #search-input { width: 100%; }
             #sort-select { width: 100%; }
 
+			.table-responsive {
+                width: 100%;
+                overflow-x: hidden; /* Khóa trượt ngang của container */
+            }
+
+            table {
+                table-layout: fixed; /* Ép bảng phải tuân thủ đúng 100% chiều ngang */
+                width: 100% !important;
+            }
+
+            th, td {
+                padding: 8px 4px; /* Thu nhỏ khoảng cách ô */
+                font-size: 16px;   /* Giảm font chữ để hiển thị được nhiều hơn */
+                word-wrap: break-word; /* Ép xuống dòng nếu từ quá dài */
+                overflow-wrap: break-word;
+            }
+
             .quiz-options { grid-template-columns: 1fr; }
             .quiz-question { font-size: 20px; }
             .quiz-btn { padding: 10px; font-size: 16px; }
