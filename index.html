@@ -98,7 +98,7 @@
         /* --- CSS CHO TRẮC NGHIỆM --- */
         .quiz-container { display: none; background: #fff; padding: 20px; border: 1px solid #ccc; border-radius: 5px; }
         .quiz-question { font-size: 28px; font-weight: bold; margin-bottom: 20px; color: #333; }
-        .quiz-options { gap: 15px; }
+        .quiz-options {display: grid; grid-template-columns: 1fr 1fr; gap: 15px; }
         .quiz-btn { 
             padding: 15px; background-color: #eee; border: 2px solid #ccc; 
             cursor: pointer; text-align: left; transition: 0.2s; font-size: 20px;
@@ -278,7 +278,7 @@
                 overflow-wrap: break-word;
             }
 			 .quiz-options {
-				grid-template-columns: 1fr;
+				grid-template-columns: repeat(1, 1fr);
 			}
             .quiz-question { font-size: 20px; }
             .quiz-btn { padding: 10px; font-size: 16px; }
@@ -292,7 +292,7 @@
         }
 		@media screen and (min-width: 736px) {
 			.quiz-options {
-				grid-template-columns: 1fr 1fr;
+				grid-template-columns: repeat(2, 1fr);
 			}
 		}
     </style>
