@@ -98,7 +98,7 @@
         /* --- CSS CHO TRẮC NGHIỆM --- */
         .quiz-container { display: none; background: #fff; padding: 20px; border: 1px solid #ccc; border-radius: 5px; }
         .quiz-question { font-size: 28px; font-weight: bold; margin-bottom: 20px; color: #333; }
-        .quiz-options { display: grid; grid-template-columns: 1fr 1fr; gap: 15px; }
+        .quiz-options { gap: 15px; }
         .quiz-btn { 
             padding: 15px; background-color: #eee; border: 2px solid #ccc; 
             cursor: pointer; text-align: left; transition: 0.2s; font-size: 20px;
@@ -207,7 +207,7 @@
             opacity: 0.6;
         }
 
-        @media screen and (max-width: 735px) {
+        @media screen and (max-width: 736px) {
             body { padding: 5px; font-size: 18px; }
 
             .dashboard-row { gap: 5px; margin-bottom: 10px; }
@@ -215,12 +215,12 @@
                 flex: 1 1 0px;    
                 width: 0;         
                 min-width: 0;
-                padding: 8px 5px !important;				
+                padding: 8px 5px !important; 				
             }
 			#quiz-panel .dash-box {
                 display: flex; 
                 align-items: center;     
-                justify-content: center;   
+                justify-content: center;  
             }
             .dash-title { font-size: clamp(10px, 3vw, 12px); margin-bottom: 2px; white-space: nowrap; }
             .dash-value { font-size: clamp(14px, 4vw, 16px);
@@ -277,8 +277,9 @@
                 word-wrap: break-word; /* Ép xuống dòng nếu từ quá dài */
                 overflow-wrap: break-word;
             }
-
-            .quiz-options { grid-template-columns: 1fr; }
+			 .quiz-options {
+				grid-template-columns: repeat(1, 1fr);
+			}
             .quiz-question { font-size: 20px; }
             .quiz-btn { padding: 10px; font-size: 16px; }
             
@@ -289,6 +290,11 @@
             .btn-nav { font-size: 16px; }
             .nav-wrapper.center .btn-delete { font-size: 16px; padding: 5px 10px; }
         }
+		@media screen and (min-width: 736px) {
+			.quiz-options {
+				grid-template-columns: repeat(2, 1fr);
+			}
+		}
     </style>
 </head>
 <body>
@@ -932,7 +938,7 @@ a:nhỏ, một ít;abandon:bỏ, từ bỏ;abandoned:bị bỏ rơi, bị ruồn
                             <div style="font-weight: bold; font-size: 20px; margin-bottom: 10px; color: #333;">
                                 Câu ${index + 1}: ${item.question}
                             </div>
-                            <div class="quiz-options" style="grid-template-columns: 1fr 1fr; gap: 10px;">
+                            <div class="quiz-options" style="gap: 10px;">
                                 ${optionsButtons}
                             </div>
                             <div style="margin-top: 10px; color: #555; font-style: italic; border-top: 1px dashed #ccc; padding-top: 5px;">
