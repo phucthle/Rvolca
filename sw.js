@@ -1,10 +1,11 @@
-const CACHE_NAME = "my-app-cache-v2";
+const CACHE_NAME = "my-app-cache-v1";
 
 const urlsToCache = [
   "/",
   "index.html",
   "manifest.json",
-  "icon-192.png"
+  "icon-192.png",
+  "volca.js"
 ];
 
 self.addEventListener("install", event => {
